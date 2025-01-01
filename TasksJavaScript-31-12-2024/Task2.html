@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <select onchange="updatTextStyle()" id="selectFont">
+            <option  value="Fantasy">Fantasy</option>
+            <option  value="Arial">Arial</option>
+        </select>
+        <select id="selectSize">
+            <option id="10">10px</option>
+            <option id="20">20px</option>
+        </select>
+        <label >Italic</label><input type="checkbox" id="italicCheckbox">
+        <label >Bold</label><input type="checkbox" id="boldCheckbox">
+        <label >Underline</label><input type="checkbox" id="underlineCheckbox">
+        <br>
+        <textarea cols="30" rows="10" id="area">
+            Ahmad bani younes
+        </textarea>
+    </div>
+
+    <script>
+      
+
+let fontSelect = document.getElementById('selectFont');
+let sizeSelect = document.getElementById('selectSize');
+let italicCheckbox = document.getElementById('italicCheckbox');
+let boldCheckbox = document.getElementById('boldCheckbox');
+let underlineCheckbox = document.getElementById('underlineCheckbox');
+let textArea = document.getElementById('area');
+
+
+fontSelect.addEventListener('change', () => 
+{
+  textArea.style.fontFamily = selectFont.value;
+});
+
+
+sizeSelect.addEventListener('change', () => 
+{
+  textArea.style.fontSize = selectSize.value;
+});
+
+italicCheckbox.addEventListener('change', () => 
+{
+  textArea.style.fontStyle = italicCheckbox.checked ? 'italic' : 'normal';
+});
+
+
+boldCheckbox.addEventListener('change', () => 
+{
+  textArea.style.fontWeight = boldCheckbox.checked ? 'bold' : 'normal';
+});
+
+
+underlineCheckbox.addEventListener('change', () => 
+{
+  textArea.style.textDecoration = underlineCheckbox.checked ? 'underline' : 'none';
+});
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

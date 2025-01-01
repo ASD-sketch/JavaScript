@@ -23,10 +23,16 @@
 
 //Q3
 //What the index of "Banana","Tomato"
-//var fruits=["Tomato","Banana","Watermelon"]
- 
-// Banana-->1
-// Tomato-->0
+//  var fruits=["Tomato","Banana","Watermelon"]
+
+// for(let i=0;i<fruits.length;i++)
+// {
+//     if(fruits[i]=="Banana")
+//       document.write(i);
+
+//     if(fruits[i]=="Tomato")
+//       document.write(i);
+// }
 
 
 
@@ -84,15 +90,16 @@ Ex: lastOfArray([1,4,5]) => 5
 Ex: lastOfArray(["t","u","g","x"]) => "x"
 */
 
-
-
-
-// var arr1 = [1,4,5];
-// var last = arr1.length-1;
+//  var arr1 = [1,4,5];
+// for(let i=0;i<arr1.length;i++)
+//     if(i==arr1.length-1)
+//     document.write(arr1[i]);
 
 
 // var arr2 = ["t","u","g","x"];
-// var last1 = arr2.length-1;
+// for(let i=0;i<arr2.length;i++)
+//      if(i==arr2.length-1)
+//         document.write(arr2[i]);
 
 
 
@@ -145,11 +152,30 @@ Sample Output : -4,-3,1,2,3,5,6,7,8
 */
 
 // var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
-// arr1.sort();
+// arr1.sort(function(a, b) {return a - b;});
+// document.write(arr1);
+
+
+// var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+// for (let i = 0; i < arr1.length; i++) 
+// {
+//   for (let j = 0; j < arr1.length - 1; j++) 
+// {
+//     if (arr1[j] > arr1[j + 1]) 
+// {
+//       let temp = arr1[j];
+//       arr1[j] = arr1[j + 1];
+//       arr1[j + 1] = temp;
+// }
+// }
+// }
 // document.write(arr1);
 
 
 
+
+
+//Q9
 // let x = window.prompt("Enter");
 
 // document.write(fun(x));
@@ -194,22 +220,22 @@ Sample Output : -4,-3,1,2,3,5,6,7,8
 
 
 
-let n = window.prompt("enter");
+// let n = window.prompt("enter");
 
-document.write(factorial(n));
-
-
+// document.write(factorial(n));
 
 
 
-function factorial(num) {
+
+
+// function factorial(num) {
     
-    let result = 1;
-    for (let i = 1; i <= num; i++) {
-        result *= i;
-    }
-    return result;
-}
+//     let result = 1;
+//     for (let i = 1; i <= num; i++) {
+//         result *= i;
+//     }
+//     return result;
+// }
 
 // function factorial(n) {
 
