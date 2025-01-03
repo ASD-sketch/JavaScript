@@ -1,7 +1,9 @@
 //Q1
 
 // let x=250;
-// document.write(x*2.5);
+//if(x>=4000)
+// document.write(x*(2.5/100)); 
+//else document.write("no zakat");
 
 
 
