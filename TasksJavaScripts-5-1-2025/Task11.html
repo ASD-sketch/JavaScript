@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store and Display Data</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="number" id="age" placeholder="Age"><br>
+        <input type="text" id="gender" placeholder="Gender"><br>
+        <input type="date" id="birth" placeholder="Birth Date"><br>
+        <textarea id="description" placeholder="Description"></textarea><br>
+        <input type="text" id="major" placeholder="Major"><br>
+        <input type="checkbox" id="Html" value="HTML"> HTML<br>
+        <input type="checkbox" id="css" value="CSS"> CSS<br>
+        <input type="checkbox" id="js" value="JavaScript"> JavaScript<br>
+        <input type="number" id="number" placeholder="Number"><br>
+        <textarea id="descriptionNumber" placeholder="Description Number"></textarea><br>
+        <input type="file" id="file" accept="image/*"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+
+    <script>
+        const form = document.getElementById('form');
+        const output = document.getElementById('output');
+        const fileInput = document.getElementById('file');
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const imageSrc = e.target.result;
+            localStorage.setItem("file", imageSrc);
+        };
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+            const birth = document.getElementById('birth').value;
+            const description = document.getElementById('description').value;
+            const major = document.getElementById('major').value;
+            const html = document.getElementById('Html').checked ? "HTML" : "";
+            const css = document.getElementById('css').checked ? "CSS" : "";
+            const js = document.getElementById('js').checked ? "JavaScript" : "";
+            const number = document.getElementById('number').value;
+            const descriptionNumber = document.getElementById('descriptionNumber').value;
+
+            if (fileInput.files[0]) {
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("age", age);
+            localStorage.setItem("gender", gender);
+            localStorage.setItem("birth", birth);
+            localStorage.setItem("description", description);
+            localStorage.setItem("major", major);
+            localStorage.setItem("Html", html);
+            localStorage.setItem("css", css);
+            localStorage.setItem("js", js);
+            localStorage.setItem("number", number);
+            localStorage.setItem("descriptionNumber", descriptionNumber);
+
+            displayData();
+        });
+
+        function displayData() {
+            const name = localStorage.getItem("name");
+            const age = localStorage.getItem("age");
+            const gender = localStorage.getItem("gender");
+            const birth = localStorage.getItem("birth");
+            const description = localStorage.getItem("description");
+            const major = localStorage.getItem("major");
+            const html = localStorage.getItem("Html");
+            const css = localStorage.getItem("css");
+            const js = localStorage.getItem("js");
+            const number = localStorage.getItem("number");
+            const descriptionNumber = localStorage.getItem("descriptionNumber");
+            const imageSrc = localStorage.getItem("file");
+
+            output.innerHTML = `
+                ${imageSrc ? `<img src="${imageSrc}" alt="Uploaded Image" style="max-width: 300px;">` : ""}
+                <p>Name: ${name}</p>
+                <p>Age: ${age}</p>
+                <p>Gender: ${gender}</p>
+                <p>Birth Date: ${birth}</p>
+                <p>Description: ${description}</p>
+                <p>Major: ${major}</p>
+                <p>Skills: ${[html, css, js].filter(Boolean).join(", ")}</p>
+                <p>Number: ${number}</p>
+                <p>Description Number: ${descriptionNumber}</p>
+            `;
+        }
+
+        displayData();
+    </script>
+</body>
+</html>

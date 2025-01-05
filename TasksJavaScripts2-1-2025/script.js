@@ -23,7 +23,7 @@
 
 
 
-//Q3
+
 // function calculateSupply(amount,age)
 // {
 //     let x = 100-age;
@@ -34,7 +34,7 @@
 
 
 
-//Q4
+
 // function greet(name)
 // {
 //     document.write("Hello "+name);
@@ -45,7 +45,7 @@
 
 
 
-//Q5
+
 // function double(cat) {
 //     return 2 * x;
 //   }
@@ -69,7 +69,7 @@
 
 
 
-//Q6
+
 
 /*
 
@@ -93,7 +93,7 @@ function double3(x)
 
 
 
-//Q7
+
 
 // function cube(x)
 // {
@@ -105,7 +105,7 @@ function double3(x)
 
 
 
-//Q8
+
 // function multiply(x,y)
 // {
 //     return x*y;
@@ -117,7 +117,7 @@ function double3(x)
 
 
 
-//Q9
+
 // function canIGetADrivingLicense(age)
 // {
 //     if(age>=20)
@@ -137,7 +137,7 @@ function double3(x)
 
 
 
-//Q10
+
 // function sameLength(x="",y="")
 // {
 //     if(x.length==y.length)
@@ -151,7 +151,7 @@ function double3(x)
 
 
 
-//Q11
+
 // function largerNubmer(x,y)
 // {
 //     if(x>y)
@@ -167,7 +167,7 @@ function double3(x)
 
 
 
-//Q12
+
 // function smallerNubmer(x,y,z)
 // {
 //     if(x<y && x<z)
@@ -186,7 +186,7 @@ function double3(x)
 
 
 
-//Q13
+
 // function isEven(x)
 // {
 //     if(x%2==0)
@@ -197,7 +197,7 @@ function double3(x)
 
 
 
-//Q14
+
 // function positive(x)
 // {
 //     if(x<0)
@@ -208,7 +208,7 @@ function double3(x)
 
 
 
-//Q15
+
 // function fullName(Fname,Lname)
 // {
 //     return Fname+" "+Lname;
@@ -217,7 +217,7 @@ function double3(x)
 
 
 
-//Q16
+
 // function avg(x,y,z,a,b)
 // {
 //     return (x+y+z+a+b)/5;
@@ -242,24 +242,30 @@ function double3(x)
 // }
 
 
+// console.log(counter());
 
+// console.log(counter());
+// console.log(counter());
 
-//Q24
+// //Q24
 // function resetCounter() {
-//     let lastCount = currentCount - 1;
-//     currentCount = 0;
-//     return lastCount+' '+'and the counter reset now';
+//     let last = counter() - 2;
+//    // currentCount = 0;
+//     return last+' '+'and the counter reset now';
 // }
-// console.log(counter());
-// console.log(counter());
-// console.log(counter());
 // console.log(resetCounter());
+// console.log(resetCounter());
+
+// console.log(resetCounter());
+
 // console.log(counter());
 // console.log(counter());
 // console.log(resetCounter());
 
 
     
+
+
 
 
 
