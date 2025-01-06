@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <style>
+
+        #top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            visibility: hidden;
+           
+        }
+
+        #top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #top:hover {
+            background-color: #0056b3;
+        }
+
+      
+        @media (max-width: 768px) {
+            #back-to-top {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 2000px;">
+      
+    </div>
+
+    <button id="top" onclick="scrollToTop()">top</button>
+
+    <script>
+      
+        const Top= document.getElementById('top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                Top.classList.add('visible');
+            } else {
+                Top.classList.remove('visible');
+            }
+        });
+
+    
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

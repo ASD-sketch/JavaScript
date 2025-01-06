@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select name="" onchange="updateFlag()" id="country">
+        <option value="jordan">jordan</option>
+        <option value="Palestine">Palestine</option>
+        <option value="syria">syria</option>
+    </select>
+    <br>
+    <img src="" id="img" alt="photo">
+
+
+
+    <script>
+
+function updateFlag() {
+            const select = document.getElementById("country").value;
+            const flag = document.getElementById("img");
+            
+
+            const flags = {
+                jordan: "jordan.png",
+                Palestine: "palestine.png",
+                syria: "syria.png",
+            };
+
+            flag.src = flags[select];
+        }
+
+    </script>
+</body>
+</html>
