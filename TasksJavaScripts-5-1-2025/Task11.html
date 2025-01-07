@@ -20,10 +20,15 @@
         <textarea id="descriptionNumber" placeholder="Description Number"></textarea><br>
         <input type="file" id="file" accept="image/*"><br>
         <button type="submit">Submit</button>
+        <button type="submit" id="showData" onclick="displayData()">Show</button>
+
     </form>
     <div id="output"></div>
 
     <script>
+
+
+
         const form = document.getElementById('form');
         const output = document.getElementById('output');
         const fileInput = document.getElementById('file');
@@ -67,6 +72,7 @@
 
             displayData();
         });
+
 
         function displayData() {
             const name = localStorage.getItem("name");
