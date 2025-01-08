@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task localFile</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Users</h1>
+    <div class="container" id="Card"></div>
+
+    <script>
+        async function loadLocalData() {
+            const response = await fetch("data.json");
+            const users = await response.json();
+
+            const container = document.getElementById("Card");
+            users.forEach(user => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                    <h3>${user.name}</h3>
+                    <p>Age: ${user.age}</p>
+                    <p>Email: ${user.email}</p>
+                    <p>Profession: ${user.profession}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        loadLocalData();
+    </script>
+</body>
+</html>
